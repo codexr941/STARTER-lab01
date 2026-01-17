@@ -21,7 +21,7 @@ IntList::IntList(const IntList& source) {
     while (S!= nullptr){
         Node *N=new Node;
         N->info=S->info;
-        N->next=nullptr；
+        N->next=nullptr;
         D->next=N;
         D=D->next;
         S=S->next;
