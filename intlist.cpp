@@ -23,17 +23,36 @@ int IntList::sum() const {
    int sum=0;
    Node *n= head;
    while(n != nullptr){
-       sum=sum+n->
+       sum=sum+n->info;
+       n=n->next;
 }
-
+   return sum;
+}
 // returns true if value is in the list; false if not
 bool IntList::contains(int value) const {
-    return false; // REPLACE THIS NON-SOLUTION
+   Node *n=head;
+    while(n!=nullptr){
+        if(n->info==value)
+            return true;
+        else
+            n=n->next;
+}
+   return false;
 }
 
 // returns maximum value in list, or 0 if empty list
 int IntList::max() const {
-    return 0; // REPLACE THIS NON-SOLUTION
+   Node *n =head;
+    if (n==nullptr)
+        return 0;
+    int max=n->info;
+    while(n!=nullptr)
+        {
+            if(n->info > max)
+                max=n->info;
+            n=n->next;
+        }
+    return max;
 }
 
 // returns average (arithmetic mean) of all values, or
