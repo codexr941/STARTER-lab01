@@ -20,7 +20,10 @@ IntList::~IntList() {
 
 // return sum of values in list
 int IntList::sum() const {
-    return 0; // REPLACE THIS NON-SOLUTION
+   int sum=0;
+   Node *n= head;
+   while(n != nullptr){
+       sum=sum+n->
 }
 
 // returns true if value is in the list; false if not
